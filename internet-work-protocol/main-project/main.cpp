@@ -20,19 +20,11 @@ int main()
 		read("data.txt", protocols, size);
 		for(int i = 0; i < size; i++)
 		{
-			cout << protocols[i]->start.hour << endl;
-			cout << protocols[i]->start.minute << endl;
-			cout << protocols[i]->start.seconds << endl;
-
-			cout << protocols[i]->finish.hour << endl;
-			cout << protocols[i]->finish.minute << endl;
-			cout << protocols[i]->finish.seconds << endl;
-
-			cout << protocols[i]->recieved.byte << endl;
-			cout << protocols[i]->sent.byte << endl;
-
-			cout << protocols[i]->title << endl;
-
+			cout << "Время начала работы: " << protocols[i]->start.hour << protocols[i]->start.minute << protocols[i]->start.seconds << endl;
+			cout << "Время конца работы: " << protocols[i]->finish.hour << protocols[i]->finish.minute << protocols[i]->finish.seconds << endl;
+			cout << "Получено байт: " << protocols[i]->recieved.byte << endl;
+			cout << "Отправлено байт: " << protocols[i]->sent.byte << endl;
+			cout << "Название процесса: " << protocols[i]->title << endl;
 			cout << "\n";
 		}
 		for (int i = 0; i < size; i++)
